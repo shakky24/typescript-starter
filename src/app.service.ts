@@ -1,8 +1,13 @@
 import { Injectable } from '@nestjs/common';
+import { APP_VERSION, BARTENDER_APP } from './constants';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getHello() {
+    return {
+      server: 'Bartender-API',
+      version: APP_VERSION,
+      app: 'BARTENDER_APP',
+    }
   }
 }
